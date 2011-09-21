@@ -29,11 +29,10 @@
  *
  * @return The Array.
  */
-Array.prototype.swap = function (pos1, pos2) {
-  var temp = this[pos1];
-  this[pos1] = this[pos2];
-  this[pos2] = temp;
-  return this;
+function swap (a, b) {
+  var temp = a;
+  a = b;
+  b = temp;
 }
 
 
