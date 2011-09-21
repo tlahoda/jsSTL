@@ -27,12 +27,11 @@ Array.prototype.copy = function (begin, end, transform) {
       return ele;
     };
 
-  var i = 0;
+  var i = -1;
   var res = new Array (end - begin);
   this.for_each_range (begin, end, function (ele) {
-    res[i++] = transform (ele);
+    res[++i] = transform (ele);
   });
   return res;
 }
-
 

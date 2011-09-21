@@ -35,4 +35,3 @@ Array.prototype.copy_backward = function (begin, end, transform) {
   return res;
 }
 
-
