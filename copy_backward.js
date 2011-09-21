@@ -23,9 +23,9 @@
  */
 Array.prototype.copy_backward = function (begin, end) {
   var res = new Array (end - begin);
-  var i = end;
+  var i = end - begin;
   this.for_each_range (begin, end, function (ele) {
-    res[i-- - begin] = ele;
+    res[i--] = ele;
   });
   return res;
 }
