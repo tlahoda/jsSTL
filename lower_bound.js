@@ -21,14 +21,9 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.lower_bound = function (begin, end, value, comparator) {
-  if (typeof (comparator) == "undefined")
-    comparator = function (ele) {
-      return ele >= value;
-    };
-
+Array.prototype.lower_bound = function (begin, end, value) {
   this.for_each_range (begin, end, function (ele) {
-    if (comparator (ele, value)) return false;
+    if (ele >= value) return false;
     ++begin;
   });
   return begin;

@@ -21,16 +21,10 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.equal = function (begin1, end1, array2, begin2, predicate) {
-  if (typeof (predicate) == "undefined") 
-    predicate = function (ele1, ele2) { 
-      return ele1 == ele2;
-    };
-
+Array.prototype.equal = function (begin1, end1, array2, begin2) {
   for (var i = 0, last = end1 = begin1; i < end1 - last; ++i)
-    if (!predicate (this[begin1 + i], array2[begin2 + i]))
+    if (this[begin1 + i] != array2[begin2 + i])
       return false;
   return true;
 }
-
 

@@ -21,15 +21,10 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.find_first_of = function (begin1, end1, array2, begin2, end2, predicate) {
-  if (typeof (predicate) == "undefined")
-    predicate = function (ele1, ele2) {
-      return ele1 == ele2;
-    };
-
+Array.prototype.find_first_of = function (begin1, end1, array2, begin2, end2) {
   this.for_each_range (begin1, end1, function (ele1) {
     array2.for_each_range (begin2, end2, function (ele2) {
-      if (predicate (ele1, ele2)) return false;
+      if (ele1 == ele2) return false;
     });
     ++begin1;
   });

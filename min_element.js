@@ -30,13 +30,10 @@
  *
  * @return The index of the minimum element of the array.
  */
-Array.prototype.min_element = function (begin, end, comparator) {
-  if (typeof (comparator) == "undefined")
-    comparator = Math.min;
-
+Array.prototype.min_element = function (begin, end) {
   var min = begin;
   for (var i = ++begin; i < end; ++i)
-    if (comparator (this[i], this[min]))
+    if (Math.min (this[i], this[min]))
       min = i;
   return min;
 }

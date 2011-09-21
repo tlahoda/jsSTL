@@ -1,5 +1,5 @@
 /**
- * @file upper_bound.js, Contains the upper_bound implementation.
+ * @file copy_transform.js, Contains the copy_transform implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,11 +21,12 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.upper_bound = function (begin, end, value) {
+Array.prototype.copy_transform = function (begin, end, transform) {
+  var i = -1;
+  var res = new Array (end - begin);
   this.for_each_range (begin, end, function (ele) {
-    if (ele >= value) return false;
-    ++begin;
+    res[++i] = transform (ele);
   });
-  return begin;
+  return res;
 }
 

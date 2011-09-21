@@ -21,14 +21,9 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.adjacent_find = function (begin, end, predicate) {
-  if (typeof (predicate) == "undefined") 
-    predicate = function (ele1, ele2) { 
-      return ele1 == ele2;
-    };
-
+Array.prototype.adjacent_find = function (begin, end) {
   for (var i = begin, last = end - 1; i < last; ++i)
-    if (predicate (this[i], this[i + 1]))
+    if (this[i] == this[i + 1])
       return i;
   return end;
 }

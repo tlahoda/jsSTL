@@ -1,5 +1,5 @@
 /**
- * @file upper_bound.js, Contains the upper_bound implementation.
+ * @file upper_bound_if.js, Contains the upper_bound_if implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,9 +21,9 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.upper_bound = function (begin, end, value) {
+Array.prototype.upper_bound_if = function (begin, end, value, comparator) {
   this.for_each_range (begin, end, function (ele) {
-    if (ele >= value) return false;
+    if (comparator (ele, value)) return false;
     ++begin;
   });
   return begin;

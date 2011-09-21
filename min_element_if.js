@@ -1,5 +1,5 @@
 /**
- * @file upper_bound.js, Contains the upper_bound implementation.
+ * @file min_element_if.js, Contains the min_element_if implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,11 +21,20 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.upper_bound = function (begin, end, value) {
-  this.for_each_range (begin, end, function (ele) {
-    if (ele >= value) return false;
-    ++begin;
-  });
-  return begin;
+/**
+ * Returns the index of the minimum element in the specified range of the array.
+ *
+ * @param begin The beginning of the range.
+ * @param end The end of the range.
+ * @param comparator The comparison function.
+ *
+ * @return The index of the minimum element of the array.
+ */
+Array.prototype.min_element_if = function (begin, end, comparator) {
+  var min = begin;
+  for (var i = ++begin; i < end; ++i)
+    if (comparator (this[i], this[min]))
+      min = i;
+  return min;
 }
 

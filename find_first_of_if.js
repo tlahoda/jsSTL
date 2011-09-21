@@ -1,5 +1,5 @@
 /**
- * @file upper_bound.js, Contains the upper_bound implementation.
+ * @file find_first_of_if.js, Contains the find_first_of_if implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,11 +21,14 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.upper_bound = function (begin, end, value) {
-  this.for_each_range (begin, end, function (ele) {
-    if (ele >= value) return false;
-    ++begin;
+Array.prototype.find_first_of_if = function (begin1, end1, array2, begin2, end2, predicate) {
+  this.for_each_range (begin1, end1, function (ele1) {
+    array2.for_each_range (begin2, end2, function (ele2) {
+      if (predicate (ele1, ele2)) return false;
+    });
+    ++begin1;
   });
-  return begin;
+  return begin1;
 }
+
 

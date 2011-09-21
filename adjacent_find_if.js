@@ -1,5 +1,5 @@
 /**
- * @file upper_bound.js, Contains the upper_bound implementation.
+ * @file adjacent_find_if.js, Contains the adjacent_find_if implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,11 +21,10 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.upper_bound = function (begin, end, value) {
-  this.for_each_range (begin, end, function (ele) {
-    if (ele >= value) return false;
-    ++begin;
-  });
-  return begin;
+Array.prototype.adjacent_find_if = function (begin, end, predicate) {
+  for (var i = begin, last = end - 1; i < last; ++i)
+    if (predicate (this[i], this[i + 1]))
+      return i;
+  return end;
 }
 

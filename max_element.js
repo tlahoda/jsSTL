@@ -30,13 +30,10 @@
  *
  * @return The index of the maximum element of the array.
  */
-Array.prototype.max_element = function (begin, end, comparator) {
-  if (typeof (comparator) == "undefined") 
-    comparator = Math.max;
-
+Array.prototype.max_element = function (begin, end) {
   var max = begin;
   for (var i = ++begin; i < end; ++i)
-    if (comparator (this[i], this[max]))
+    if (Math.max (this[i], this[max]))
       max = i;
   return max;
 }
