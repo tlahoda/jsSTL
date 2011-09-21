@@ -25,8 +25,8 @@ Array.prototype.search = function (begin1, end1, array2, begin2, end2) {
   var len = end2 - begin2;
   for (; begin1 < end1; ++begin1) {
     var matches = 0;
-    for (var j = begin2; j < end2; ++j)
-      if (this[begin1] == array2[j])
+    for (var j = begin2; j < end2 && begin1 + (j - begin2) < end1; ++j)
+      if (this[begin1 + (j - begin2)] == array2[j])
         ++matches;
       else
         break;
