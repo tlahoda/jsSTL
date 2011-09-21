@@ -22,7 +22,7 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.adjacent_find = function (begin, end, predicate) {
-  if (predicate == undefined) 
+  if (typeof (predicate) == "undefined") 
     predicate = function (ele1, ele2) { 
       return ele1 == ele2;
     };
