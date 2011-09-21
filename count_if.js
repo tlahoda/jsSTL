@@ -1,5 +1,5 @@
 /**
- * @file count.js, Contains the count implementation.
+ * @file count_if.js, Contains the count_if implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,10 +21,10 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.count = function (begin, end, value) {
+Array.prototype.count_if = function (begin, end, predicate) {
   var c = 0;
   this.for_each_range (begin, end, function (ele) {
-    if (ele == value) ++c;
+    if (predicate (ele)) ++c;
   });
   return c;
 }
