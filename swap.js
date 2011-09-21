@@ -22,10 +22,10 @@
  * DEALINGS IN THE SOFTWARE.
  */
 /**
- * Swaps two elements of the array.
+ * Swaps two elements.
  *
- * @param pos1 The index of the first element.
- * @param pos2 The index of the second element.
+ * @param a The first element.
+ * @param b The second element.
  *
  * @return The Array.
  */
