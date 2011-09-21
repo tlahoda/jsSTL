@@ -21,9 +21,9 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.find = function (begin, end, value) {
+Array.prototype.find = function (begin, end, predicate) {
   this.for_each_range (begin, end, function (ele) {
-    if (ele == value) return false;
+    if (predicate (ele)) return false;
     ++begin;
   });
   return begin;
