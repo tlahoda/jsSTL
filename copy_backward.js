@@ -22,8 +22,15 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.copy_backward = function (begin, end) {
+  if (arguments.length == 0) {
+    begin = 0;
+    end = this.length;
+  } else if (arguments.length == 1) {
+    end = this.length; 
+  }
+
   var res = new Array (end - begin);
-  var i = end - begin;
+  var i = end - begin - 1;
   this.for_each_range (begin, end, function (ele) {
     res[i--] = ele;
   });
