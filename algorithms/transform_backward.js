@@ -1,5 +1,5 @@
 /**
- * @file copy_backward_transform.js, Contains the copy_backward_transform implementation.
+ * @file transform_backward.js, Contains the transform_backward implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,11 +21,11 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.copy_backward_transform = function (begin, end, transform) {
+Array.prototype.transform_backward = function (begin, end, op) {
   var i = end - begin;
   var res = new Array (i);
   this.for_each_range (begin, end, function (ele) {
-    res[--i] = transform (ele);
+    res[--i] = op (ele);
   });
   return res;
 }

@@ -1,5 +1,5 @@
 /**
- * @file copy_transform.js, Contains the copy_transform implementation.
+ * @file transform.js, Contains the transform implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,11 +21,11 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.copy_transform = function (begin, end, transform) {
+Array.prototype.transform = function (begin, end, op) {
   var i = -1;
   var res = new Array (end - begin);
   this.for_each_range (begin, end, function (ele) {
-    res[++i] = transform (ele);
+    res[++i] = op (ele);
   });
   return res;
 }
