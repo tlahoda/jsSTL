@@ -31,15 +31,13 @@
  * @return The index of the minimum element of the array.
  */
 Array.prototype.min_element = function (begin, end, comparator) {
-  if (begin == undefined) begin = 0;
-  if (end == undefined) end = list.length;
-  if (comparator == undefined) comparator = Math.min;
+  if (typeof (comparator) == "undefined")
+    comparator = Math.min;
 
   var min = begin;
-  for (var i = begin; i < end; ++i)
+  for (var i = ++begin; i < end; ++i)
     if (comparator (this[i], this[min]))
       min = i;
   return min;
 }
-
 

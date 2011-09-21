@@ -22,16 +22,15 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.upper_bound = function (begin, end, value, comparator) {
-  if (comparator == undefined)
+  if (typeof (comparator) == "undefined")
     comparator = function (ele) {
       return ele > value;
     };
 
-  var i = begin;
   this.for_each_range (begin, end, function (ele) {
     if (comparator (ele, value)) return false;
-    ++i;
+    ++begin;
   });
-  return i;
+  return begin;
 }
 

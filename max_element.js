@@ -31,15 +31,13 @@
  * @return The index of the maximum element of the array.
  */
 Array.prototype.max_element = function (begin, end, comparator) {
-  if (begin == undefined) begin = 0;
-  if (end == undefined) end = list.length;
-  if (comparator == undefined) comparator = Math.max;
+  if (typeof (comparator) == "undefined") 
+    comparator = Math.max;
 
   var max = begin;
-  for (var i = begin; i < end; ++i)
+  for (var i = ++begin; i < end; ++i)
     if (comparator (this[i], this[max]))
       max = i;
   return max;
 }
-
 
