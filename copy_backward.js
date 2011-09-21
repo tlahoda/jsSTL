@@ -21,18 +21,16 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.copy_backward = function (begin, end) {
-  if (arguments.length == 0) {
-    begin = 0;
-    end = this.length;
-  } else if (arguments.length == 1) {
-    end = this.length; 
-  }
+Array.prototype.copy_backward = function (begin, end, transform) {
+  if (typeof (transform) == "undefined") 
+    transform = function (ele) { 
+      return ele;
+    };
 
-  var res = new Array (end - begin);
-  var i = end - begin - 1;
+  var i = end - begin;
+  var res = new Array (i);
   this.for_each_range (begin, end, function (ele) {
-    res[i--] = ele;
+    res[--i] = transform (ele);
   });
   return res;
 }
