@@ -31,10 +31,10 @@
  * @return The index of the maximum element of the array.
  */
 Array.prototype.max_element_if = function (begin, end, comparator) {
-  var max = begin;
-  for (var i = ++begin; i < end; ++i)
-    if (comparator (this[i], this[max]))
-      max = i;
+  var max = begin++;
+  for (; begin < end; ++begin)
+    if (comparator (this[begin], this[max]))
+      max = begin;
   return max;
 }
 

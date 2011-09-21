@@ -31,10 +31,10 @@
  * @return The index of the minimum element of the array.
  */
 Array.prototype.min_element_if = function (begin, end, comparator) {
-  var min = begin;
-  for (var i = ++begin; i < end; ++i)
-    if (comparator (this[i], this[min]))
-      min = i;
+  var min = begin++;
+  for (; begin < end; ++begin)
+    if (comparator (this[begin], this[min]))
+      min = begin;
   return min;
 }
 

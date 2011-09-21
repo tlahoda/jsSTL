@@ -22,9 +22,12 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.adjacent_find_if = function (begin, end, predicate) {
-  for (var i = begin, last = end - 1; i < last; ++i)
-    if (predicate (this[i], this[i + 1]))
-      return i;
+  //this is an unusual loop construct done for efficiency as there is
+  //no need for a separate loop iterator variable. The loop terminator
+  //is also cached for efficency.
+  for (var last = end - 1; begin < last; ++begin)
+    if (predicate (this[begin], this[begin + 1]))
+      return begin;
   return end;
 }
 
