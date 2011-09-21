@@ -31,7 +31,7 @@ Array.prototype.search = function (begin1, end1, array2, begin2, end2) {
       else
         break;
 
-    if (matches == length)
+    if (matches == len)
       break;
   }
   return begin1;
