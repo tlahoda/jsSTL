@@ -23,7 +23,8 @@
  */
 function less_equal (ele1, ele2) {
   if (arguments.length == 1)
-    return function (ele2) {
+    var ele2 = ele1;
+    return function (ele1) {
       return ele1 <= ele2;
     }
   else
