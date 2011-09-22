@@ -25,6 +25,7 @@ Array.prototype.fill_n = function (begin, n, value) {
   this.apply_range (begin, begin + n, function (ele) {
     return value;
   });
+  return this;
 }
 
 
