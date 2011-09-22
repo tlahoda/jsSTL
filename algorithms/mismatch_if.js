@@ -1,5 +1,5 @@
 /**
- * @file mismatch.js, Contains the mismatch implementation.
+ * @file mismatch_if.js, Contains the mismatch_if implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,11 +21,13 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.mismatch = function (begin1, end1, array2, begin2) {
+Array.prototype.mismatch_if = function (begin1, end1, array2, begin2, predicate) {
   var i = 0;
-  for (var last = end1 - begin1; i < end1 - last; ++i)
-    if (this[begin1 + i] != array2[begin2 + i])
-      break;
+  this.for_each_range (begin1, end1, function (ele) {
+    if (!predicate (this[begin1 + i], array2[begin2 + i]))
+      return false;
+    ++i;
+  });
   return new pair (begin1 + i, begin2 + i);
 }
 
