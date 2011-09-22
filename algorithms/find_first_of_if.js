@@ -26,8 +26,8 @@ Array.prototype.find_first_of_if = function (begin1, end1, array2, begin2, end2,
   this.for_each_range (begin1, end1, function (ele1) {
     var matches = 0;
     array2.for_each_range (begin2, end2, function (ele2) {
-      if (predicate (ele1, ele2)) ++matches;
-      else matches = 0;
+      if (!predicate (ele1, ele2)) return false;
+      ++matches;
     });
 
     if (matches == len) return false;
@@ -35,5 +35,4 @@ Array.prototype.find_first_of_if = function (begin1, end1, array2, begin2, end2,
   });
   return begin1;
 }
-
 
