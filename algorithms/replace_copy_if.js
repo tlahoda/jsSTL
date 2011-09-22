@@ -23,9 +23,9 @@
  */
 Array.prototype.replace_copy = function (begin, end, predicate, newValue) {
   var res = new Array (end - begin);
-  var i = 0;
+  var i = -1;
   this.for_each_range (begin, end, function (ele) {
-    res[i] = (predicate (ele, value)) ? newValue : ele;
+    res[++i] = (predicate (ele, value)) ? newValue : ele;
   });
   return res;
 }
