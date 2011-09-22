@@ -22,11 +22,10 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.remove_copy = function (begin, end, value) {
-  var res = new Array (end - begin);
-  var i = 0;
+  var res = new Array ();
   this.for_each_range (begin, end, function (ele) {
     if (ele != value)
-      res[i++] = ele;
+      res.push (ele);
   });
   return res;
 }
