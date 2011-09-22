@@ -21,6 +21,14 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
+/**
+ * ele1 || ele2. This function is curryable on the .
+ *
+ * @param ele1 The first element.
+ * @param ele2 The second element.
+ *
+ * @return The logical or.
+ */
 function logical_or (ele1, ele2) {
   if (arguments.length == 1)
     var ele2 = ele1;

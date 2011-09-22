@@ -21,6 +21,14 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
+/**
+ * ele1 / ele2. This function is curryable on ele2.
+ *
+ * @param ele1 The dividend.
+ * @param ele2 The divisor.
+ *
+ * @return The quotient.
+ */
 function divides (ele1, ele2) {
   if (arguments.length == 1)
     var ele2 = ele1;

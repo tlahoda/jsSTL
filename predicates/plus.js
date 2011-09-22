@@ -21,6 +21,14 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
+/**
+ * ele1 + ele2. This function is curryable.
+ *
+ * @param ele1 The first summand.
+ * @param ele2 The second summand.
+ *
+ * @return The sum.
+ */
 function plus (ele1, ele2) {
   if (arguments.length == 1)
     var ele2 = ele1;

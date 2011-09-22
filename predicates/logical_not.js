@@ -21,6 +21,13 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
+/**
+ * !ele. This function is curryable.
+ *
+ * @param ele The element.
+ *
+ * @return The logical not.
+ */
 function logical_not (ele) {
   if (arguments.length == 0)
     return function (ele) {
