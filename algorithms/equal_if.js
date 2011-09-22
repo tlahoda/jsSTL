@@ -22,9 +22,11 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.equal_if = function (begin1, end1, array2, begin2, predicate) {
-  for (var i = 0, last = end1 - begin1; i < last; ++i)
-    if (!predicate (this[begin1 + i], array2[begin2 + i]))
+  this.for_each_range (begin1, end1, function (ele) {
+    if (!predicate (ele, array2[begin2++]))
       return false;
-  return true;
+    ++begin1;
+  });
+  return begin1 == end1;
 }
 
