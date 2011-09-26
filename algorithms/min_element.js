@@ -33,7 +33,7 @@
 Array.prototype.min_element = function (begin, end) {
   var min = begin++;
   for (; begin < end; ++begin)
-    if (Math.min (this[begin], this[min]))
+    if (this[begin] < this[min])
       min = begin;
   return min;
 }

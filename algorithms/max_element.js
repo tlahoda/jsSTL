@@ -33,7 +33,7 @@
 Array.prototype.max_element = function (begin, end) {
   var max = begin++;
   for (; begin < end; ++begin)
-    if (Math.max (this[begin], this[max]))
+    if (this[begin] > this[max])
       max = begin;
   return max;
 }
