@@ -29,9 +29,10 @@ Array.prototype.search_n = function (begin, end, n, value) {
     else
       matches = 0;
 
-    if (matches == n)
+    if (matches == n) {
+      begin -= n - 1;
       break;
-    else
+    } else
       ++begin;
   }
   return begin;
