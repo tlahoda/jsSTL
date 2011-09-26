@@ -25,6 +25,13 @@
     
     <script type="text/javascript" src="../containers/pair.js"></script>
 
+    <script type="text/javascript" src="../numeric/accumulate.js"></script>
+    <script type="text/javascript" src="../numeric/accumulate_if.js"></script>
+    <script type="text/javascript" src="../numeric/adjacent_difference.js"></script>
+    <script type="text/javascript" src="../numeric/adjacent_difference_if.js"></script>
+    <script type="text/javascript" src="../numeric/partial_sum.js"></script>
+    <script type="text/javascript" src="../numeric/partial_sum_if.js"></script>
+
     <script type="text/javascript" src="../predicates/divides.js"></script>
     <script type="text/javascript" src="../predicates/equal_to.js"></script>
     <script type="text/javascript" src="../predicates/greater.js"></script>
@@ -408,6 +415,45 @@
         console.log ("plus -> " + plus (10, 5));
       }
 
+      function example_accumulate () {
+        var temp = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log ("accumulate -> " + temp.accumulate (0, temp.length, 0));
+      }
+
+      function example_accumulate_if () {
+        var temp = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log ("accumulate_if -> " + 
+          temp.accumulate_if (0, temp.length, 0, function (res, ele) {
+            return res + ele;
+          }));
+      }
+
+      function example_adjacent_difference () {
+        var temp = [1, 3, 7, 8, 25];
+        console.log ("adjacent_difference -> " + temp.adjacent_difference (0, temp.length));
+      }
+
+      function example_adjacent_difference_if () {
+        var temp = [1, 3, 7, 8, 25];
+        console.log ("adjacent_difference_if -> " + 
+          temp.adjacent_difference_if (0, temp.length, function (ele1, ele2) {
+            return ele1 - ele2;
+          }));
+      }
+
+      function example_partial_sum () {
+        var temp = [1, 3, 7, 8, 25];
+        console.log ("partial_sum -> " + temp.partial_sum (0, temp.length));
+      }
+
+      function example_partial_sum_if () {
+        var temp = [1, 3, 7, 8, 25];
+        console.log ("partial_sum_if -> " + 
+          temp.partial_sum_if (0, temp.length, function (ele1, ele2) {
+            return ele1 + ele2;
+          }));
+      }
+
       function ready () {
         example_adjacent_find ();
         example_adjacent_find_if ();
@@ -474,6 +520,14 @@
         example_negate ();
         example_not_equal_to ();
         example_plus ();
+
+        console.log ("------------------------------------------------------");
+        example_accumulate ();
+        example_accumulate_if ();
+        example_adjacent_difference ();
+        example_adjacent_difference_if ();
+        example_partial_sum ();
+        example_partial_sum_if ();
       }
     </script>
   </head>
