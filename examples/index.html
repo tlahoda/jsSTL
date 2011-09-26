@@ -26,9 +26,11 @@
     <script type="text/javascript" src="../containers/pair.js"></script>
 
     <script type="text/javascript" src="../numeric/accumulate.js"></script>
-    <script type="text/javascript" src="../numeric/accumulate_if.js"></script>
+    <script type="text/javascript" src="../numeric/accumulate_by.js"></script>
     <script type="text/javascript" src="../numeric/adjacent_difference.js"></script>
     <script type="text/javascript" src="../numeric/adjacent_difference_if.js"></script>
+    <script type="text/javascript" src="../numeric/inner_product.js"></script>
+    <script type="text/javascript" src="../numeric/inner_product_if.js"></script>
     <script type="text/javascript" src="../numeric/partial_sum.js"></script>
     <script type="text/javascript" src="../numeric/partial_sum_if.js"></script>
 
@@ -420,10 +422,10 @@
         console.log ("accumulate -> " + temp.accumulate (0, temp.length, 0));
       }
 
-      function example_accumulate_if () {
+      function example_accumulate_by () {
         var temp = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-        console.log ("accumulate_if -> " + 
-          temp.accumulate_if (0, temp.length, 0, function (res, ele) {
+        console.log ("accumulate_by -> " + 
+          temp.accumulate_by (0, temp.length, 0, function (res, ele) {
             return res + ele;
           }));
       }
@@ -439,6 +441,18 @@
           temp.adjacent_difference_if (0, temp.length, function (ele1, ele2) {
             return ele1 - ele2;
           }));
+      }
+
+      function example_inner_product () {
+        var temp1 = [1, 3, 7, 8];
+        var temp2 = [2, 4, 8, 9];
+        console.log ("inner_product -> " + temp1.inner_product (0, temp1.length, temp2, 0, 0));
+      }
+
+      function example_inner_product_if () {
+        var temp1 = [1, 3, 7, 8];
+        var temp2 = [2, 4, 8, 9];
+        console.log ("inner_product_if -> " + temp1.inner_product_if (0, temp1.length, temp2, 0, 0, plus, multiplies));
       }
 
       function example_partial_sum () {
@@ -523,9 +537,11 @@
 
         console.log ("------------------------------------------------------");
         example_accumulate ();
-        example_accumulate_if ();
+        example_accumulate_by ();
         example_adjacent_difference ();
         example_adjacent_difference_if ();
+        example_inner_product ();
+        example_inner_product_if ();
         example_partial_sum ();
         example_partial_sum_if ();
       }
