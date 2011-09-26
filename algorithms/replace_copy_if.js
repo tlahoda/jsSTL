@@ -21,11 +21,11 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.replace_copy = function (begin, end, predicate, newValue) {
+Array.prototype.replace_copy_if = function (begin, end, predicate, newValue) {
   var res = new Array (end - begin);
   var i = -1;
   this.for_each_range (begin, end, function (ele) {
-    res[++i] = (predicate (ele, value)) ? newValue : ele;
+    res[++i] = (predicate (ele)) ? newValue : ele;
   });
   return res;
 }
