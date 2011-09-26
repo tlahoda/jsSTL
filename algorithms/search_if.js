@@ -21,7 +21,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.search_if = function (begin1, end1, array2, begin2, predicate) {
+Array.prototype.search_if = function (begin1, end1, array2, begin2, end2, predicate) {
   var len = end2 - begin2;
   for (; begin1 < end1; ++begin1) {
     var matches = 0;
