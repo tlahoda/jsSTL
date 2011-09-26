@@ -60,6 +60,8 @@
     <script type="text/javascript" src="../algorithms/equal_if.js"></script>
     <script type="text/javascript" src="../algorithms/fill.js"></script>
     <script type="text/javascript" src="../algorithms/fill_n.js"></script>
+    <script type="text/javascript" src="../algorithms/find_end.js"></script>
+    <script type="text/javascript" src="../algorithms/find_end_if.js"></script>
     <script type="text/javascript" src="../algorithms/find_first_of.js"></script>
     <script type="text/javascript" src="../algorithms/find_first_of_if.js"></script>
     <script type="text/javascript" src="../algorithms/find.js"></script>
@@ -152,6 +154,18 @@
       function example_fill_n () {
         var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
         console.log ("fill_n -> " + temp.fill_n (2, 5, 4));
+      }
+
+      function example_find_end () {
+        var temp1 = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        var temp2 = [0, 4, 5, 7, 7];
+        console.log ("find_end -> " + temp1.find_end (0, temp1.length, temp2, 4, 5));
+      }
+
+      function example_find_end_if () {
+        var temp1 = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        var temp2 = [0, 4, 5, 7, 7];
+        console.log ("find_end_if -> " + temp1.find_end_if (0, temp1.length, temp2, 3, 5, not_equal_to));
       }
 
       function example_find_first_of () {
@@ -496,6 +510,8 @@
         example_equal_if ();
         example_fill ();
         example_fill_n ();
+        example_find_end ();
+        example_find_end_if ();
         example_find_first_of ();
         example_find_first_of_if ();
         example_find ();
