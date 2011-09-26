@@ -22,10 +22,11 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.rotate_copy = function (begin, middle, end) {
-  var back = this.slice (begin, middle);
+  var back = this.slice (begin, middle - begin);
   back.unshift (0);
-  back.unshift (middle);
+  back.unshift (end - middle);
   var front = this.slice (middle, end);
-  return front.splice.apply (front, back);
+  front.splice.apply (front, back);
+  return front;
 }
 
