@@ -23,7 +23,8 @@
  */
 Array.prototype.replace_if = function (begin, end, predicate, newValue) {
   this.apply_range (begin, end, function (ele) {
-    return (predicate (ele, value)) ? newValue : ele;
+    return (predicate (ele)) ? newValue : ele;
   });
+  return this;
 }
 

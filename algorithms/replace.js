@@ -25,5 +25,6 @@ Array.prototype.replace = function (begin, end, value, newValue) {
   this.apply_range (begin, end, function (ele) {
     return (ele == value) ? newValue : ele;
   });
+  return this;
 }
 
