@@ -1,5 +1,5 @@
 /**
- * @file inner_product_if.js, Contains the inner_product_if implementation.
+ * @file inner_product_by.js, Contains the inner_product_by implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,7 +21,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.inner_product_if = function (begin1, end1, array2, begin2, init, op1, op2) {
+Array.prototype.inner_product_by = function (begin1, end1, array2, begin2, init, op1, op2) {
   var res = init;
   var i = -1;
   this.for_each_range (begin1, end1, function (ele) {

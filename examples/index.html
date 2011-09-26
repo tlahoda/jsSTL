@@ -28,7 +28,7 @@
     <script type="text/javascript" src="../numeric/accumulate.js"></script>
     <script type="text/javascript" src="../numeric/accumulate_by.js"></script>
     <script type="text/javascript" src="../numeric/adjacent_difference.js"></script>
-    <script type="text/javascript" src="../numeric/adjacent_difference_if.js"></script>
+    <script type="text/javascript" src="../numeric/adjacent_difference_by.js"></script>
     <script type="text/javascript" src="../numeric/inner_product.js"></script>
     <script type="text/javascript" src="../numeric/inner_product_if.js"></script>
     <script type="text/javascript" src="../numeric/partial_sum.js"></script>
@@ -435,10 +435,10 @@
         console.log ("adjacent_difference -> " + temp.adjacent_difference (0, temp.length));
       }
 
-      function example_adjacent_difference_if () {
+      function example_adjacent_difference_by () {
         var temp = [1, 3, 7, 8, 25];
-        console.log ("adjacent_difference_if -> " + 
-          temp.adjacent_difference_if (0, temp.length, function (ele1, ele2) {
+        console.log ("adjacent_difference_by -> " + 
+          temp.adjacent_difference_by (0, temp.length, function (ele1, ele2) {
             return ele1 - ele2;
           }));
       }
@@ -449,10 +449,10 @@
         console.log ("inner_product -> " + temp1.inner_product (0, temp1.length, temp2, 0, 0));
       }
 
-      function example_inner_product_if () {
+      function example_inner_product_by () {
         var temp1 = [1, 3, 7, 8];
         var temp2 = [2, 4, 8, 9];
-        console.log ("inner_product_if -> " + temp1.inner_product_if (0, temp1.length, temp2, 0, 0, plus, multiplies));
+        console.log ("inner_product_by -> " + temp1.inner_product_by (0, temp1.length, temp2, 0, 0, plus, multiplies));
       }
 
       function example_partial_sum () {
@@ -460,10 +460,10 @@
         console.log ("partial_sum -> " + temp.partial_sum (0, temp.length));
       }
 
-      function example_partial_sum_if () {
+      function example_partial_sum_by () {
         var temp = [1, 3, 7, 8, 25];
-        console.log ("partial_sum_if -> " + 
-          temp.partial_sum_if (0, temp.length, function (ele1, ele2) {
+        console.log ("partial_sum_by -> " + 
+          temp.partial_sum_by (0, temp.length, function (ele1, ele2) {
             return ele1 + ele2;
           }));
       }
@@ -539,11 +539,11 @@
         example_accumulate ();
         example_accumulate_by ();
         example_adjacent_difference ();
-        example_adjacent_difference_if ();
+        example_adjacent_difference_by ();
         example_inner_product ();
-        example_inner_product_if ();
+        example_inner_product_by ();
         example_partial_sum ();
-        example_partial_sum_if ();
+        example_partial_sum_by ();
       }
     </script>
   </head>
