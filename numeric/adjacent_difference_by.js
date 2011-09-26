@@ -1,5 +1,5 @@
 /**
- * @file adjacent_difference_if.js, Contains the adjacent_difference_if implementation.
+ * @file adjacent_difference_by.js, Contains the adjacent_difference_by implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,7 +21,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.adjacent_difference_if = function (begin, end, op) {
+Array.prototype.adjacent_difference_by = function (begin, end, op) {
   var len = end - begin;
   var res = new Array (len);
   res[0] = this[begin];
