@@ -1,0 +1,406 @@
+<!--
+ file index.html
+ Contains the examples of using jsSTL.
+
+ Copyright (C) 2011 Thomas P. Lahoda
+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+
+<html>
+  <head>
+    <script type="text/javascript" src="../external/functional_arrays.js"></script>
+    
+    <script type="text/javascript" src="../containers/pair.js"></script>
+
+    <script type="text/javascript" src="../predicates/divides.js"></script>
+    <script type="text/javascript" src="../predicates/equal_to.js"></script>
+    <script type="text/javascript" src="../predicates/greater.js"></script>
+    <script type="text/javascript" src="../predicates/greater_equal.js"></script>
+    <script type="text/javascript" src="../predicates/less.js"></script>
+    <script type="text/javascript" src="../predicates/less_equal.js"></script>
+    <script type="text/javascript" src="../predicates/logical_and.js"></script>
+    <script type="text/javascript" src="../predicates/logical_not.js"></script>
+    <script type="text/javascript" src="../predicates/logical_or.js"></script>
+    <script type="text/javascript" src="../predicates/minus.js"></script>
+    <script type="text/javascript" src="../predicates/modulus.js"></script>
+    <script type="text/javascript" src="../predicates/multiplies.js"></script>
+    <script type="text/javascript" src="../predicates/negate.js"></script>
+    <script type="text/javascript" src="../predicates/not_equal_to.js"></script>
+    <script type="text/javascript" src="../predicates/plus.js"></script>
+
+    <script type="text/javascript" src="../algorithms/adjacent_find.js"></script>
+    <script type="text/javascript" src="../algorithms/adjacent_find_if.js"></script>
+    <script type="text/javascript" src="../algorithms/copy_backward.js"></script>
+    <script type="text/javascript" src="../algorithms/copy.js"></script>
+    <script type="text/javascript" src="../algorithms/count.js"></script>
+    <script type="text/javascript" src="../algorithms/count_if.js"></script>
+    <script type="text/javascript" src="../algorithms/equal.js"></script>
+    <script type="text/javascript" src="../algorithms/equal_if.js"></script>
+    <script type="text/javascript" src="../algorithms/fill.js"></script>
+    <script type="text/javascript" src="../algorithms/fill_n.js"></script>
+    <script type="text/javascript" src="../algorithms/find_first_of.js"></script>
+    <script type="text/javascript" src="../algorithms/find_first_of_if.js"></script>
+    <script type="text/javascript" src="../algorithms/find.js"></script>
+    <script type="text/javascript" src="../algorithms/find_if.js"></script>
+    <script type="text/javascript" src="../algorithms/generate.js"></script>
+    <script type="text/javascript" src="../algorithms/generate_n.js"></script>
+    <script type="text/javascript" src="../algorithms/iter_swap.js"></script>
+    <script type="text/javascript" src="../algorithms/lower_bound.js"></script>
+    <script type="text/javascript" src="../algorithms/lower_bound_if.js"></script>
+    <script type="text/javascript" src="../algorithms/max_element.js"></script>
+    <script type="text/javascript" src="../algorithms/max_element_if.js"></script>
+    <script type="text/javascript" src="../algorithms/min_element.js"></script>
+    <script type="text/javascript" src="../algorithms/min_element_if.js"></script>
+    <script type="text/javascript" src="../algorithms/mismatch.js"></script>
+    <script type="text/javascript" src="../algorithms/mismatch_if.js"></script>
+    <script type="text/javascript" src="../algorithms/remove_copy.js"></script>
+    <script type="text/javascript" src="../algorithms/remove_copy_if.js"></script>
+    <script type="text/javascript" src="../algorithms/replace_copy.js"></script>
+    <script type="text/javascript" src="../algorithms/replace_copy_if.js"></script>
+    <script type="text/javascript" src="../algorithms/replace.js"></script>
+    <script type="text/javascript" src="../algorithms/replace_if.js"></script>
+    <script type="text/javascript" src="../algorithms/reverse_copy.js"></script>
+    <script type="text/javascript" src="../algorithms/reverse.js"></script>
+    <script type="text/javascript" src="../algorithms/rotate_copy.js"></script>
+    <script type="text/javascript" src="../algorithms/rotate.js"></script>
+    <script type="text/javascript" src="../algorithms/search.js"></script>
+    <script type="text/javascript" src="../algorithms/search_if.js"></script>
+    <script type="text/javascript" src="../algorithms/search_n.js"></script>
+    <script type="text/javascript" src="../algorithms/search_n_if.js"></script>
+    <script type="text/javascript" src="../algorithms/swap_ranges.js"></script>
+    <script type="text/javascript" src="../algorithms/transform_backward.js"></script>
+    <script type="text/javascript" src="../algorithms/transform_backward_on.js"></script>
+    <script type="text/javascript" src="../algorithms/transform.js"></script>
+    <script type="text/javascript" src="../algorithms/transform_on.js"></script>
+    <script type="text/javascript" src="../algorithms/unique_copy.js"></script>
+    <script type="text/javascript" src="../algorithms/unique_copy_if.js"></script>
+    <script type="text/javascript" src="../algorithms/upper_bound.js"></script>
+    <script type="text/javascript" src="../algorithms/upper_bound_if.js"></script>
+
+    <script type="text/javascript">
+      function example_adjacent_find () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("adjacent_find -> " + temp.adjacent_find (0, temp.length));
+      }
+
+      function example_adjacent_find_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("adjacent_find_if -> " + temp.adjacent_find (0, temp.length, equal_to));
+      }
+
+      function example_copy_backward () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("copy_backward -> " + temp.copy_backward (0, temp.length));
+      }
+
+      function example_copy () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("copy -> " + temp.copy (0, temp.length));
+      }
+
+      function example_count () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("count -> " + temp.count (0, temp.length, 7));
+      }
+
+      function example_count_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("count_if -> " + temp.count_if (0, temp.length, less (7)));
+      }
+
+      function example_equal () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("equal -> " + temp.equal (3, 5, temp1, 3));
+      }
+
+      function example_equal_if () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("equal_if -> " + temp.equal_if (3, 5, temp1, 3, equal_to));
+      }
+
+      function example_fill () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("fill -> " + temp.fill (2, 5, 4));
+      }
+
+      function example_fill_n () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("fill_n -> " + temp.fill_n (2, 5, 4));
+      }
+
+      function example_find_first_of () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("find_first_of -> " + temp.find_first_of (0, temp.length, temp1, 3, 5));
+      }
+
+      function example_find_first_of_if () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("find_first_of_if -> " + temp.find_first_of_if (0, temp.length, temp1, 3, 5, equal_to));
+      }
+
+      function example_find () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("find -> " + temp.find (0, temp.length, 7));
+      }
+
+      function example_find_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("find_if -> " + temp.find_if (0, temp.length, equal_to (8)));
+      }
+
+      function example_generate () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("generate -> " + temp.generate (2, 5, function (ele) {return 4; }));
+      }
+
+      function example_generate_n () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("generate_n -> " + temp.generate_n (2, 5, function (ele) {return 4; }));
+      }
+
+      function example_iter_swap () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("iter_swap -> " + temp.iter_swap (3, 5));
+      }
+
+      function example_lower_bound () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("lower_bound -> " + temp.lower_bound (0, temp.length, 8));
+      }
+
+      function example_lower_bound_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("lower_bound_if -> " + temp.lower_bound_if (0, temp.length, 8, equal_to));
+      }
+
+      function example_max_element () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("max_element -> " + temp.max_element (0, temp.length));
+      }
+
+      function example_max_element_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("max_element_if -> " + temp.max_element_if (0, temp.length, greater));
+      }
+
+      function example_min_element () {
+        var temp = [8, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("min_element -> " + temp.min_element (0, temp.length));
+      }
+
+      function example_min_element_if () {
+        var temp = [8, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("min_element_if -> " + temp.min_element_if (0, temp.length, less));
+      }
+
+      function example_mismatch () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        var res = temp.mismatch (3, 5, temp1, 3);
+        console.log ("mismatch -> " + res.first + ", " + res.second);
+      }
+
+      function example_mismatch_if () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        var res = temp.mismatch_if (3, 5, temp1, 3, not_equal_to);
+        console.log ("mismatch_if -> " + res.first + ", " + res.second);
+      }
+
+      function example_remove_copy () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("remove_copy -> " + temp.remove_copy (0, temp.length, 7));
+      }
+
+      function example_remove_copy_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("remove_copy_if -> " + temp.remove_copy_if (0, temp.length, equal_to (7)));
+      }
+
+      function example_replace_copy () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("replace_copy -> " + temp.replace_copy (0, temp.length, 7, 8));
+      }
+
+      function example_replace_copy_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("replace_copy_if -> " + temp.replace_copy_if (0, temp.length, equal_to (7), 8));
+      }
+
+      function example_replace () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("replace -> " + temp.replace (0, temp.length, 7, 8));
+      }
+
+      function example_replace_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("replace_if -> " + temp.replace_if (0, temp.length, equal_to (7), 8));
+      }
+
+      function example_reverse_copy () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("reverse_copy -> " + temp.reverse_copy (0, temp.length));
+      }
+
+      function example_reverse () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("reverse -> " + temp.stl_reverse (0, temp.length));
+      }
+
+      function example_rotate_copy () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("rotate_copy -> " + temp.rotate_copy (0, 3, temp.length));
+      }
+
+      function example_rotate () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("rotate -> " + temp.rotate (0, 3, temp.length));
+      }
+
+      function example_search () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("search -> " + temp.search (0, temp.length, temp1, 3, temp1.length));
+      }
+
+      function example_search_if () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("search_if -> " + temp.search_if (0, temp.length, temp1, 3, temp1.length, equal_to));
+      }
+
+      function example_search_n () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 3, 3, 2];
+        console.log ("search_n -> " + temp.search_n (0, temp.length, 2, 3));
+      }
+
+      function example_search_n_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 3, 3, 2];
+        console.log ("search_n_if -> " + temp.search_n_if (0, temp.length, 2, 7, equal_to));
+      }
+
+      function example_swap_ranges () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("swap_ranges -> " + temp.swap_ranges (4, 7, temp1, 2));
+      }
+
+      function example_transform_backward () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("transform_backward -> " + temp.transform_backward (0, temp.length, negate));
+      }
+
+      function example_transform_backward_on () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("transform_backward_on -> " + temp.transform_backward_on (0, temp.length, temp1, 0, function (ele1, ele2) {
+          return (typeof (ele2) != "undefined") ? ele2 : ele1;
+        }));
+      }
+
+      function example_transform () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("transform -> " + temp.transform (0, temp.length, negate));
+      }
+
+      function example_transform_on () {
+        var temp1 = [0, 4, 5, 7, 7];
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("transform_on -> " + temp.transform_on (0, temp.length, temp1, 0, function (ele1, ele2) {
+          return (typeof (ele2) != "undefined") ? ele2 : ele1;
+        }));
+      }
+
+      function example_unique_copy () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("unique_copy -> " + temp.unique_copy (0, temp.length));
+      }
+
+      function example_unique_copy_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("unique_copy_if -> " + temp.unique_copy (0, temp.length));
+      }
+
+      function example_upper_bound () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("upper_bound -> " + temp.upper_bound (0, temp.length, 8));
+      }
+
+      function example_upper_bound_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("upper_bound_if -> " + temp.upper_bound (0, temp.length, 8));
+      }
+
+      function ready () {
+        example_adjacent_find ();
+        example_adjacent_find_if ();
+        example_copy_backward ();
+        example_copy ();
+        example_count ();
+        example_count_if ();
+        example_equal ();
+        example_equal_if ();
+        example_fill ();
+        example_fill_n ();
+        example_find_first_of ();
+        example_find_first_of_if ();
+        example_find ();
+        example_find_if ();
+        example_generate ();
+        example_generate_n ();
+        example_iter_swap ();
+        example_lower_bound ();
+        example_lower_bound_if ();
+        example_max_element ();
+        example_max_element_if ();
+        example_min_element ();
+        example_min_element_if ();
+        example_mismatch ();
+        example_mismatch_if ();
+        example_remove_copy ();
+        example_remove_copy_if ();
+        example_replace_copy ();
+        example_replace_copy_if ();
+        example_replace ();
+        example_replace_if ();
+        example_reverse_copy ();
+        example_reverse ();
+        example_rotate_copy ();
+        example_rotate ();
+        example_search ();
+        example_search_if ();
+        example_search_n ();
+        example_search_n_if ();
+        example_swap_ranges ();
+        example_transform_backward ();
+        example_transform_backward_on ();
+        example_transform ();
+        example_transform_on ();
+        example_unique_copy ();
+        example_unique_copy_if ();
+        example_upper_bound ();
+        example_upper_bound_if ();
+      }
+    </script>
+  </head>
+  <body onload="ready ();">
+  </body>
+</html>
+
