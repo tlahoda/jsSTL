@@ -22,10 +22,11 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.transform_backward_on = function (begin1, end1, array2, begin2, op) {
-  var i = end - begin1;
+  var len = end1 - begin1;
+  var i = len;
   var res = new Array (i);
   this.for_each_range (begin1, end1, function (ele) {
-    res[--i] = op (ele, array2[begin2 + i]);
+    res[--i] = op (ele, array2[begin2 + (len - i - 1)]);
   });
   return res;
 }
