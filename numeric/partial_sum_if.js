@@ -22,11 +22,13 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.partial_sum_if = function (begin, end, op) {
-  var len = end - begin;
-  var res = new Array (len);
+  var res = new Array (end - begin);
   var res[0] = this[begin];
-  for (var i = 1; i < len; ++i)
-    res[i] = op (res[i - 1], this[i]);
+  var i = 0;
+  this.for_each_range (++begin, end, function (ele) {
+    res[i] = op (res[i - 1], ele);
+    ++i;
+  });
   return res;
 }
 
