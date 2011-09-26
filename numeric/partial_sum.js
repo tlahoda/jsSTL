@@ -24,7 +24,7 @@
 Array.prototype.partial_sum = function (begin, end) {
   var res = new Array (end - begin);
   var res[0] = this[begin];
-  var i = 0;
+  var i = 1;
   this.for_each_range (++begin, end, function (ele) {
     res[i] = res[i - 1] + ele;
     ++i;
