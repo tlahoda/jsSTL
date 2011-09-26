@@ -8,6 +8,6 @@ yet have real containers other than Array. Because of this lack of
 containers I have chosen to use array indices as the iterators.
 
 This is a work in progress and not all algorithms have been
-implemented. Those that have have not yet been tested for
-correctness but will be soon.
+implemented. index.html contains usage examples for the algorithms and
+predicates that have been implemented.
 
