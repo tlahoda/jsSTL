@@ -2,7 +2,7 @@ jsSTL
 =====
 
 jsSTL is an implementation of C++'s STL algorithms as extensions
-to the prototypical Javascriptr Array. The algorithms are implemented
+to the prototypical Javascript Array. The algorithms are implemented
 on the Array prototype for simplicity and since Javascript does not
 yet have real containers other than Array. Because of this lack of 
 containers I have chosen to use array indices as the iterators.
