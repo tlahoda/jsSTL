@@ -30,12 +30,12 @@
  * @return True if greater than or equal to, false otherwise.
  */
 function greater_equal (ele1, ele2) {
-  if (arguments.length == 1)
+  if (arguments.length == 1) {
     var ele2 = ele1;
     return function (ele1) {
       return ele1 >= ele2;
     }
-  else
+  } else
     return ele1 >= ele2;
 }
 

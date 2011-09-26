@@ -29,11 +29,11 @@
  * @return The logical not.
  */
 function logical_not (ele) {
-  if (arguments.length == 0)
+  if (arguments.length == 0) {
     return function (ele) {
       return !ele;
     }
-  else
+  } else
     return !ele;
 }
 
