@@ -23,8 +23,9 @@
  */
 Array.prototype.rotate = function (begin, middle, end) {
   var back = this.splice (begin, middle - begin);
+  back.unshift (middle - begin);
   back.unshift (end - middle);
-  back.unshift (middle);
   this.splice.apply (this, back);
+  return this;
 }
 
