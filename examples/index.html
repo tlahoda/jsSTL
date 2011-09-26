@@ -67,6 +67,8 @@
     <script type="text/javascript" src="../algorithms/generate.js"></script>
     <script type="text/javascript" src="../algorithms/generate_n.js"></script>
     <script type="text/javascript" src="../algorithms/iter_swap.js"></script>
+    <script type="text/javascript" src="../algorithms/lexicographical_compare.js"></script>
+    <script type="text/javascript" src="../algorithms/lexicographical_compare_if.js"></script>
     <script type="text/javascript" src="../algorithms/lower_bound.js"></script>
     <script type="text/javascript" src="../algorithms/lower_bound_if.js"></script>
     <script type="text/javascript" src="../algorithms/max_element.js"></script>
@@ -187,6 +189,21 @@
       function example_iter_swap () {
         var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
         console.log ("iter_swap -> " + temp.iter_swap (3, 5));
+      }
+
+      function example_lexicographical_compare () {
+        var temp1 = [1, 2, 5, 7, 7, 5, 3, 8, 8, 3];
+        var temp2 = [1, 2, 2, 3, 6, 7, 7, 7, 8, 10];
+        console.log ("lexicographical_compare -> " + temp1.lexicographical_compare (0, temp1.length, temp2, 0));
+      }
+
+      function example_lexicographical_compare_if () {
+        var temp1 = [1, 2, 2, 3, 6, 7, 7, 7, 8, 10];
+        var temp2 = [1, 2, 5, 7, 7, 5, 3, 8, 8, 3];
+        console.log ("lexicographical_compare_if -> " + 
+          temp1.lexicographical_compare_if (0, temp1.length, temp2, 0, function (ele1, ele2) {
+            return ele1 < ele2;
+          }));
       }
 
       function example_lower_bound () {
@@ -486,6 +503,8 @@
         example_generate ();
         example_generate_n ();
         example_iter_swap ();
+        example_lexicographical_compare ();
+        example_lexicographical_compare_if ();
         example_lower_bound ();
         example_lower_bound_if ();
         example_max_element ();
