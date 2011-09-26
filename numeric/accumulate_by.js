@@ -1,5 +1,5 @@
 /**
- * @file accumulate_if.js, Contains the accumulate_if implementation.
+ * @file accumulate_by.js, Contains the accumulate_by implementation.
  *
  * Copyright (C) 2011 Thomas P. Lahoda
  *
@@ -21,7 +21,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-Array.prototype.accumulate_if = function (begin, end, init, op) {
+Array.prototype.accumulate_by = function (begin, end, init, op) {
   var res = init;
   this.for_each_range (begin, end, function (ele) {
      res = op (res, ele);
