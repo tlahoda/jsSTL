@@ -24,7 +24,7 @@
 Array.prototype.mismatch_if = function (begin1, end1, array2, begin2, predicate) {
   var i = 0;
   this.for_each_range (begin1, end1, function (ele) {
-    if (!predicate (this[begin1 + i], array2[begin2 + i]))
+    if (!predicate (ele, array2[begin2 + i]))
       return false;
     ++i;
   });
