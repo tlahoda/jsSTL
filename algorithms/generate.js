@@ -23,5 +23,6 @@
  */
 Array.prototype.generate = function (begin, end, generator) {
   this.apply_range (begin, end, generator);
+  return this;
 }
 

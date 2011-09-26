@@ -23,6 +23,7 @@
  */
 Array.prototype.generate_n = function (begin, n, generator) {
   this.apply_range (begin, begin + n, generator);
+  return this;
 }
 
 
