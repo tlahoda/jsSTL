@@ -23,7 +23,7 @@
  */
 Array.prototype.partial_sum_if = function (begin, end, op) {
   var res = new Array (end - begin);
-  var res[0] = this[begin];
+  res[0] = this[begin];
   var i = 1;
   this.for_each_range (++begin, end, function (ele) {
     res[i] = op (res[i - 1], ele);
