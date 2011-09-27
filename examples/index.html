@@ -79,6 +79,8 @@
     <script type="text/javascript" src="../algorithms/min_element_if.js"></script>
     <script type="text/javascript" src="../algorithms/mismatch.js"></script>
     <script type="text/javascript" src="../algorithms/mismatch_if.js"></script>
+    <script type="text/javascript" src="../algorithms/remove.js"></script>
+    <script type="text/javascript" src="../algorithms/remove_if.js"></script>
     <script type="text/javascript" src="../algorithms/remove_copy.js"></script>
     <script type="text/javascript" src="../algorithms/remove_copy_if.js"></script>
     <script type="text/javascript" src="../algorithms/replace_copy.js"></script>
@@ -98,6 +100,7 @@
     <script type="text/javascript" src="../algorithms/transform_backward_on.js"></script>
     <script type="text/javascript" src="../algorithms/transform.js"></script>
     <script type="text/javascript" src="../algorithms/transform_on.js"></script>
+    <script type="text/javascript" src="../algorithms/unique.js"></script>
     <script type="text/javascript" src="../algorithms/unique_copy.js"></script>
     <script type="text/javascript" src="../algorithms/unique_copy_if.js"></script>
     <script type="text/javascript" src="../algorithms/upper_bound.js"></script>
@@ -264,6 +267,16 @@
         console.log ("mismatch_if -> " + res.first + ", " + res.second);
       }
 
+      function example_remove () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("remove -> " + temp.remove (0, temp.length, 7));
+      }
+
+      function example_remove_if () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("remove_if -> " + temp.remove_if (0, temp.length, equal_to (7)));
+      }
+
       function example_remove_copy () {
         var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
         console.log ("remove_copy -> " + temp.remove_copy (0, temp.length, 7));
@@ -366,6 +379,11 @@
         console.log ("transform_on -> " + temp.transform_on (0, temp.length, temp1, 0, function (ele1, ele2) {
           return (typeof (ele2) != "undefined") ? ele2 : ele1;
         }));
+      }
+
+      function example_unique () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("unique -> " + temp.unique (0, temp.length));
       }
 
       function example_unique_copy () {
@@ -529,6 +547,8 @@
         example_min_element_if ();
         example_mismatch ();
         example_mismatch_if ();
+        example_remove ();
+        example_remove_if ();
         example_remove_copy ();
         example_remove_copy_if ();
         example_replace_copy ();
@@ -548,6 +568,7 @@
         example_transform_backward_on ();
         example_transform ();
         example_transform_on ();
+        example_unique ();
         example_unique_copy ();
         example_unique_copy_if ();
         example_upper_bound ();
