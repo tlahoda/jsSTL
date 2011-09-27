@@ -68,6 +68,8 @@
     <script type="text/javascript" src="../algorithms/find_if.js"></script>
     <script type="text/javascript" src="../algorithms/generate.js"></script>
     <script type="text/javascript" src="../algorithms/generate_n.js"></script>
+    <script type="text/javascript" src="../algorithms/includes.js"></script>
+    <script type="text/javascript" src="../algorithms/includes_if.js"></script>
     <script type="text/javascript" src="../algorithms/iter_swap.js"></script>
     <script type="text/javascript" src="../algorithms/lexicographical_compare.js"></script>
     <script type="text/javascript" src="../algorithms/lexicographical_compare_if.js"></script>
@@ -202,6 +204,18 @@
       function example_generate_n () {
         var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
         console.log ("generate_n -> " + temp.generate_n (2, 5, function (ele) {return 4; }));
+      }
+
+      function example_includes () {
+        var temp1 = [1, 2, 2, 3, 5, 7, 7, 7, 8, 10];
+        var temp2 = [5, 7];
+        console.log ("includes -> " + temp1.includes (0, temp1.length, temp2, 0, temp2.length));
+      }
+
+      function example_includes_if () {
+        var temp1 = [1, 2, 2, 3, 5, 7, 7, 7, 8, 10];
+        var temp2 = [4, 7];
+        console.log ("includes_if -> " + temp1.includes_if (0, temp1.length, temp2, 0, temp2.length, equal_to));
       }
 
       function example_iter_swap () {
@@ -544,6 +558,8 @@
         example_find_if ();
         example_generate ();
         example_generate_n ();
+        example_includes ();
+        example_includes_if ();
         example_iter_swap ();
         example_lexicographical_compare ();
         example_lexicographical_compare_if ();
