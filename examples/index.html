@@ -79,6 +79,7 @@
     <script type="text/javascript" src="../algorithms/min_element_if.js"></script>
     <script type="text/javascript" src="../algorithms/mismatch.js"></script>
     <script type="text/javascript" src="../algorithms/mismatch_if.js"></script>
+    <script type="text/javascript" src="../algorithms/random_shuffle.js"></script>
     <script type="text/javascript" src="../algorithms/remove.js"></script>
     <script type="text/javascript" src="../algorithms/remove_if.js"></script>
     <script type="text/javascript" src="../algorithms/remove_copy.js"></script>
@@ -265,6 +266,13 @@
         var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
         var res = temp.mismatch_if (3, 5, temp1, 3, not_equal_to);
         console.log ("mismatch_if -> " + res.first + ", " + res.second);
+      }
+
+      function example_random_shuffle () {
+        var temp = [1, 6, 2, 7, 7, 8, 10, 7, 3, 2];
+        console.log ("random_shuffle -> " + temp.random_shuffle (0, temp.length, function (n) {
+          return Math.floor (Math.random () * n);
+        }));
       }
 
       function example_remove () {
@@ -547,6 +555,7 @@
         example_min_element_if ();
         example_mismatch ();
         example_mismatch_if ();
+        example_random_shuffle ();
         example_remove ();
         example_remove_if ();
         example_remove_copy ();
