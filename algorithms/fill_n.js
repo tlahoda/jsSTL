@@ -26,6 +26,4 @@ Array.prototype.fill_n = function (begin, n, value) {
     return value;
   });
   return this;
-}
-
-
+};

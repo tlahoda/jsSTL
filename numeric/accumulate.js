@@ -27,5 +27,4 @@ Array.prototype.accumulate = function (begin, end, init) {
     res += ele;
   });
   return res;
-}
-
+};

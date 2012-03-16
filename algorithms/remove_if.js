@@ -27,5 +27,4 @@ Array.prototype.remove_if = function (begin, end, predicate) {
       this.splice (begin, 1);
     else ++begin;
   return this;
-}
-
+};

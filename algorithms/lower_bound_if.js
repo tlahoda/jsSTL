@@ -27,5 +27,4 @@ Array.prototype.lower_bound_if = function (begin, end, value, comparator) {
     ++begin;
   });
   return begin;
-}
-
+};

@@ -25,5 +25,4 @@ Array.prototype.reverse_copy = function (begin, end) {
   var temp = this.splice (begin, end - begin);
   temp.reverse ();
   return temp;
-}
-
+};

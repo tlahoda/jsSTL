@@ -34,5 +34,4 @@ Array.prototype.find_first_of_if = function (begin1, end1, array2, begin2, end2,
     ++begin1;
   });
   return begin1;
-}
-
+};

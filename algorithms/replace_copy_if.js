@@ -28,5 +28,4 @@ Array.prototype.replace_copy_if = function (begin, end, predicate, newValue) {
     res[++i] = (predicate (ele)) ? newValue : ele;
   });
   return res;
-}
-
+};

@@ -26,5 +26,4 @@ Array.prototype.random_shuffle = function (begin, end, generator) {
   for (var i = begin; i < end; ++i)
     this.iter_swap (i, generator (len));
   return this;
-}
-
+};

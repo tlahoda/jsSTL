@@ -35,5 +35,4 @@ Array.prototype.search = function (begin1, end1, array2, begin2, end2) {
       break;
   }
   return begin1;
-}
-
+};

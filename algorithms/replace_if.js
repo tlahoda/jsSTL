@@ -26,5 +26,4 @@ Array.prototype.replace_if = function (begin, end, predicate, newValue) {
     return (predicate (ele)) ? newValue : ele;
   });
   return this;
-}
-
+};

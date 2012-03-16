@@ -27,5 +27,4 @@ Array.prototype.accumulate_by = function (begin, end, init, op) {
      res = op (res, ele);
   });
   return res;
-}
-
+};

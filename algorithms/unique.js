@@ -28,5 +28,4 @@ Array.prototype.unique = function (begin, end) {
       this.splice (i, 1);
     else ++i;
   return this;
-}
-
+};

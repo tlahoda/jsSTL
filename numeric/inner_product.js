@@ -25,8 +25,7 @@ Array.prototype.inner_product = function (begin1, end1, array2, begin2, init) {
   var res = init;
   var i = -1;
   this.for_each_range (begin1, end1, function (ele) {
-    res += ele * array2[begin2 + ++i];
+    res += ele * array2[begin2 + (++i)];
   });
   return res;
-}
-
+};

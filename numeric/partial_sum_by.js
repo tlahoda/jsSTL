@@ -30,5 +30,4 @@ Array.prototype.partial_sum_by = function (begin, end, op) {
     ++i;
   });
   return res;
-}
-
+};

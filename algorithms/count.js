@@ -27,5 +27,4 @@ Array.prototype.count = function (begin, end, value) {
     if (ele == value) ++c;
   });
   return c;
-}
-
+};

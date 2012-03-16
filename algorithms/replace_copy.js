@@ -28,5 +28,4 @@ Array.prototype.replace_copy = function (begin, end, value, newValue) {
     res[++i] = (ele == value) ? newValue : ele;
   });
   return res;
-}
-
+};

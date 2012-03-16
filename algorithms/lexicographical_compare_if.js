@@ -28,5 +28,4 @@ Array.prototype.lexicographical_compare_if = function (begin1, end1, array2, beg
     else if (comparator (array2[begin2 + i], this[begin1 + i]))
       return false;
   return false;
-}
-
+};

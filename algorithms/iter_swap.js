@@ -34,5 +34,4 @@ Array.prototype.iter_swap = function (pos1, pos2) {
   this[pos1] = this[pos2];
   this[pos2] = temp;
   return this;
-}
-
+};

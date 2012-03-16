@@ -26,9 +26,8 @@ Array.prototype.swap_ranges = function (begin1, end1, array2, begin2) {
   this.apply_range (begin1, end1, function (ele) {
     var array2Cur = begin2 + i;
     var temp = array2[array2Cur];
-    array2[array2Cur] == this[begin1 + i++];
+    array2[array2Cur] = this[begin1 + i++];
     return temp;
   });
   return this;
-}
-
+};

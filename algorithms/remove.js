@@ -27,5 +27,4 @@ Array.prototype.remove = function (begin, end, value) {
       this.splice (begin, 1);
     else ++begin;
   return this;
-}
-
+};

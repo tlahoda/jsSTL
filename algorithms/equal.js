@@ -28,5 +28,4 @@ Array.prototype.equal = function (begin1, end1, array2, begin2) {
     ++begin1;
   });
   return begin1 == end1;
-}
-
+};

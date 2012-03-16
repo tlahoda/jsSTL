@@ -27,5 +27,4 @@ Array.prototype.find = function (begin, end, value) {
     ++begin;
   });
   return begin;
-}
-
+};

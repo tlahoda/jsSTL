@@ -29,5 +29,4 @@ Array.prototype.mismatch = function (begin1, end1, array2, begin2) {
     ++i;
   });
   return new pair (begin1 + i, begin2 + i);
-}
-
+};

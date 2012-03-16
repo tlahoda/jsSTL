@@ -33,5 +33,4 @@ function swap (a, b) {
   var temp = a;
   a = b;
   b = temp;
-}
-
+};

@@ -30,7 +30,7 @@
  */
 Array.prototype.slice_args = function (args, begin, end) {
   return Array.prototype.slice.call (args, begin, end);
-}
+};
 
 /**
  * Applies action to all of the elements of the Array.
@@ -44,7 +44,7 @@ Array.prototype.apply = function (action) {
   args.unshift (this.length);
   args.unshift (0);
   return this.apply_range.apply (this, args);
-}
+};
 
 /**
  * Applies action to the specified range of the Array elements.
@@ -63,7 +63,7 @@ Array.prototype.apply_range = function (begin, end, action) {
     args.shift ();
   }
   return this;
-}
+};
 
 /**
  * Applies action to the specified indices of the Array elements.
@@ -81,7 +81,7 @@ Array.prototype.apply_index = function (indices, action) {
     args.shift ();
   }
   return this;
-}
+};
 
 /**
  * Runs action for all of the elements of the Array.
@@ -95,7 +95,7 @@ Array.prototype.for_each = function (action) {
   args.unshift (this.length);
   args.unshift (0);
   return this.for_each_range.apply (this, args);
-}
+};
 
 /**
  * Runs action on each element in the specified range of the Array.
@@ -115,7 +115,7 @@ Array.prototype.for_each_range = function (begin, end, action) {
     args.shift ();
   }
   return this;
-}
+};
 
 /**
  * Runs action on each of the indices of the Array.
@@ -134,5 +134,4 @@ Array.prototype.for_each_index = function (indices, action) {
     args.shift ();
   }
   return this;
-}
-
+};

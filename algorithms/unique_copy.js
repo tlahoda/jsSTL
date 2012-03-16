@@ -22,11 +22,10 @@
  * DEALINGS IN THE SOFTWARE.
  */
 Array.prototype.unique_copy = function (begin, end) {
-  var res = new Array ();
+  var res = [];
   res.push (this[begin++]);
   for (; begin < end; ++begin)
     if (this[begin - 1] != this[begin])
       res.push (this[begin]);
   return res;
-}
-
+};

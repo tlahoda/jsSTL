@@ -28,5 +28,4 @@ Array.prototype.stl_reverse = function (begin, end) {
   temp.unshift (begin);
   this.splice.apply (this, temp);
   return this;
-}
-
+};

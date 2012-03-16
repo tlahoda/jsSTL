@@ -29,5 +29,4 @@ Array.prototype.remove_copy_if = function (begin, end, predicate) {
       res[i++] = ele;
   });
   return res.splice (0, i);
-}
-
+};

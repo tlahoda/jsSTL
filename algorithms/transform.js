@@ -28,5 +28,4 @@ Array.prototype.transform = function (begin, end, op) {
     res[++i] = op (ele);
   });
   return res;
-}
-
+};

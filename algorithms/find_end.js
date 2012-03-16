@@ -34,5 +34,4 @@ Array.prototype.find_end = function (begin1, end1, array2, begin2, end2) {
       return i;
   }
   return end1;
-}
-
+};

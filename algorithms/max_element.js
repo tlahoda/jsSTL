@@ -36,5 +36,4 @@ Array.prototype.max_element = function (begin, end) {
     if (this[begin] > this[max])
       max = begin;
   return max;
-}
-
+};

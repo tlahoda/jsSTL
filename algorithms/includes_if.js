@@ -31,5 +31,4 @@ Array.prototype.includes_if = function (begin1, end1, array2, begin2, end2, comp
   if (found == last)
     return true;
   return false;
-}
-
+};

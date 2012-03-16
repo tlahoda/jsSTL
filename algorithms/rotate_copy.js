@@ -28,5 +28,4 @@ Array.prototype.rotate_copy = function (begin, middle, end) {
   var front = this.slice (middle, end);
   front.splice.apply (front, back);
   return front;
-}
-
+};

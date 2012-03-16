@@ -35,5 +35,4 @@ Array.prototype.search_if = function (begin1, end1, array2, begin2, end2, predic
       break;
   }
   return begin1;
-}
-
+};

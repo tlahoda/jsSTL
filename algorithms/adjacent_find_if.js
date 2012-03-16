@@ -29,5 +29,4 @@ Array.prototype.adjacent_find_if = function (begin, end, predicate) {
     if (predicate (this[begin], this[begin + 1]))
       return begin;
   return end;
-}
-
+};

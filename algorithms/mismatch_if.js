@@ -29,5 +29,4 @@ Array.prototype.mismatch_if = function (begin1, end1, array2, begin2, predicate)
     ++i;
   });
   return new pair (begin1 + i, begin2 + i);
-}
-
+};

@@ -30,5 +30,4 @@ Array.prototype.includes = function (begin1, end1, array2, begin2, end2) {
   if (found == end2 - begin2)
     return true;
   return false;
-}
-
+};

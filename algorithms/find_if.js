@@ -27,5 +27,4 @@ Array.prototype.find_if = function (begin, end, predicate) {
     ++begin;
   });
   return begin;
-}
-
+};

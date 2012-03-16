@@ -27,5 +27,4 @@ Array.prototype.count_if = function (begin, end, predicate) {
     if (predicate (ele)) ++c;
   });
   return c;
-}
-
+};

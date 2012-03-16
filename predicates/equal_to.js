@@ -34,8 +34,7 @@ function equal_to (ele1, ele2) {
     var ele2 = ele1;
     return function (ele1) {
       return ele1 == ele2;
-    }
+    };
   } else
     return ele1 == ele2;
 }
-

@@ -27,5 +27,4 @@ Array.prototype.upper_bound = function (begin, end, value) {
     ++begin;
   });
   return begin;
-}
-
+};

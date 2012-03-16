@@ -29,5 +29,4 @@ Array.prototype.transform_backward_on = function (begin1, end1, array2, begin2, 
     res[--i] = op (ele, array2[begin2 + (len - i - 1)]);
   });
   return res;
-}
-
+};

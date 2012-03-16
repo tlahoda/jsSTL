@@ -28,5 +28,4 @@ Array.prototype.copy = function (begin, end) {
     res[++i] = ele;
   });
   return res;
-}
-
+};

@@ -28,5 +28,4 @@ Array.prototype.adjacent_difference = function (begin, end) {
   for (var i = 1; i < len; ++i)
     res[i] = this[i] - this[i - 1];
   return res;
-}
-
+};

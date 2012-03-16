@@ -36,5 +36,4 @@ Array.prototype.search_n_if = function (begin, end, n, value, predicate) {
       ++begin;
   }
   return begin;
-}
-
+};

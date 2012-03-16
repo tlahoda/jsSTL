@@ -36,5 +36,4 @@ Array.prototype.search_n = function (begin, end, n, value) {
       ++begin;
   }
   return begin;
-}
-
+};

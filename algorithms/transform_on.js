@@ -28,5 +28,4 @@ Array.prototype.transform_on = function (begin1, end1, array2, begin2, op) {
     res[++i] = op (ele, array2[begin2 + i]);
   });
   return res;
-}
-
+};

@@ -36,5 +36,4 @@ Array.prototype.max_element_if = function (begin, end, comparator) {
     if (comparator (this[begin], this[max]))
       max = begin;
   return max;
-}
-
+};

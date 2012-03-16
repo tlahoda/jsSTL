@@ -26,5 +26,4 @@ Array.prototype.replace = function (begin, end, value, newValue) {
     return (ele == value) ? newValue : ele;
   });
   return this;
-}
-
+};

@@ -36,5 +36,4 @@ Array.prototype.min_element_if = function (begin, end, comparator) {
     if (comparator (this[begin], this[min]))
       min = begin;
   return min;
-}
-
+};

@@ -29,5 +29,4 @@ Array.prototype.adjacent_find = function (begin, end) {
     if (this[begin] == this[begin + 1])
       return begin;
   return end;
-}
-
+};
